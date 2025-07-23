@@ -11,6 +11,9 @@ import { Friends } from "@/pages/Friends";
 import { Calendar as CalendarPage } from "@/pages/Calendar";
 import { Profile } from "@/pages/Profile";
 import { Wishlist } from "@/pages/Wishlist";
+import { Events } from "@/pages/Events";
+import { Feed } from "@/pages/Feed";
+import { NotificationSystem } from "@/components/NotificationSystem";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -33,12 +36,15 @@ const AppContent = () => {
 
   return (
     <>
+      <NotificationSystem />
       <Navbar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/friends" element={<Friends />} />
         <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/feed" element={<Feed />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/wishlist" element={<Wishlist />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

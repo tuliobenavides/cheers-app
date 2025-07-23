@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { Calendar, Users, Gift, Home, LogOut, Settings } from 'lucide-react'
+import { Calendar, Users, Gift, Home, LogOut, Settings, Calendar as CalendarIcon, Activity } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 
 export const Navbar = () => {
@@ -12,6 +12,8 @@ export const Navbar = () => {
   const navItems = [
     { href: '/dashboard', label: 'Home', icon: Home },
     { href: '/calendar', label: 'Calendar', icon: Calendar },
+    { href: '/events', label: 'Events', icon: CalendarIcon },
+    { href: '/feed', label: 'Feed', icon: Activity },
     { href: '/friends', label: 'Friends', icon: Users },
     { href: '/wishlist', label: 'Wishlist', icon: Gift },
   ]
